@@ -1,0 +1,155 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
+.renters-main{
+    width: 100%;
+    height: 20vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    font-family: "Spartan";
+    margin-bottom: 2vh;
+}
+.renters-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.renters-image > img {
+    width: 100%;
+}
+.renters-details{
+    width:20%;
+}
+.renters-name{
+    width: 65%;
+}
+.image{
+    width: 15%;
+    padding: 30px 20px;
+}
+.renters-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.renters-name .renter,
+.renters-name .car-name{
+    padding-bottom: 2vh;
+}
+.renters-name h2{
+    font-weight: 800;
+    font-size:1.5rem;
+}
+.renters-name p{
+    font-weight: 600;
+}
+.renters-details{
+    display: flex;
+    align-items: center;
+}
+.renters-details a{
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: rgb(88, 221, 88);
+}
+
+@media all and (max-width: 1930px){
+    .renters-image{
+        margin:  auto;
+        height: 120px;
+        width: 120px;
+    }
+    .renters-name .renters{
+        font-size: 2.7rem;
+    }
+    .renters-name .car-name,
+    .renters-details a{
+        font-size: 1.7rem;
+    }
+}
+@media all and (max-width: 1650px){
+    .renters-image{
+        margin:  auto;
+        transform: translateY(-8%);
+    }
+    .renters-name .renters{
+        font-size: 1.7rem;
+    }
+    .renters-name .car-name,
+    .renters-details a{
+        font-size: 1.4rem;
+    }
+}
+@media all and (max-width: 1500px){
+    .renters-image{
+        margin: auto;
+        transform: translateY(0%);
+    }
+    .renters-name .lender{
+        font-size: 1.4em;
+    }
+    .renters-name .car-name,
+    .renters-details a{
+        font-size: 1.2rem;
+    }
+    .renters-name{
+        padding-left: 30px;
+    }
+}
+@media all and (max-width: 1400px){
+    .renters-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media all and (max-width: 1250px){
+    .image{
+        width: 25% !important;
+    }
+    .renters-image{
+        margin-top: 40%;
+        transform: translateY(-75%);
+    }
+}
+@media all and (max-width: 912px){
+    .renters-image{
+        margin: auto;
+        transform: translateY(35%);
+    }
+}
+@media all and (max-width: 850px){
+    .renters-image{
+        margin: auto;
+        transform: translateY(35%);
+    }
+}
+@media all and (max-width: 690px){
+    .renters-image{
+        width: 80px;
+        height: 80px;
+    }
+    .renters-name .car-name,
+    .renters-details a{
+        font-size: 0.8rem;
+    }
+    .renters-name .renter{
+        font-size: 1.5em;
+    }
+}
+@media all and (max-width: 480px){
+    .renters-name .renter{
+        font-size: 1.2em;
+    }
+    /* .renters-image{
+        width: 60px;
+        height: 60px;
+    } */
+    .renters-name{
+        padding-left: 10px;
+        width: 50%;
+    }
+}

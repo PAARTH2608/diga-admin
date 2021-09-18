@@ -1,0 +1,137 @@
+.topnav {
+    padding: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: var(--topnav-height);
+}
+
+.topnav__search {
+    position: relative;
+    height: 50px;
+    width: 40%;
+    background-color: var(--main-bg);
+    display: flex;
+    align-items: center;
+    box-shadow: var(--box-shadow);
+    border-radius: 60px;
+}
+
+.topnav__search > input {
+    height: 100%;
+    width: 100%;
+    padding: 10px 60px 10px 20px;
+    font-size: 1rem;
+    border-radius: 50px;
+    color: var(--txt-color);
+    background-color: var(--main-bg);
+}
+
+.topnav__search > i {
+    font-size: 1.5rem;
+    position: absolute;
+    right: 20px;
+}
+
+.topnav__right {
+    display: flex;
+    align-items: center;
+}
+
+.notification-item {
+    display: flex;
+    align-items: center;
+    padding: 20px;
+}
+
+.notification-item:hover {
+    background-color: var(--second-bg);
+}
+
+.notification-item > i {
+    margin-right: 20px;
+    font-size: 1.5rem;
+}
+
+.topnav__right-user {
+    display: flex;
+    align-items: center;
+}
+
+.topnav__right-user__image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+    border: 5px solid rgba(255, 255, 255, 0.75);
+}
+
+.topnav__right-user__image > img {
+    width: 100%;
+}
+
+.topnav__right-user__name {
+    font-size: 1.6rem;
+    font-weight: 600;
+    padding-right: 30px;
+    text-decoration: underline;
+    padding-left: 30px;
+}
+@media all and (max-width: 1066px){
+    .topnav{
+        padding-left: 80px;
+    }
+    .topnav__search{
+        width: 60%;
+        height: 70px;
+    }
+    .topnav__search > input {
+        font-size: 1.4rem;
+    }
+}
+@media all and (max-width: 800px){
+    .topnav__search{
+        width: 50%;
+        height: 60px;
+    }
+}
+@media all and (max-width: 670px){
+    .topnav__search{
+        width: 50%;
+        height: 50px;
+    }
+    .topnav__search > input{
+        font-size: 1rem;
+    }
+    .topnav__right-user__image{
+        width: 60px;
+        height: 60px;
+    }
+    .topnav__right-user__name{
+        font-size: 1.3rem;
+        padding-right: 10px;
+    }
+}
+@media all and (max-width: 510px){
+    .topnav{
+        padding-right: 10px;
+        padding-top: 10px;
+    }
+    .topnav__search{
+        width: 50%;
+        height: 25px;
+    }
+    .topnav__search > input{
+        font-size: 0.7rem;
+        padding-right: 10px;
+    }
+    .notification-item{
+        display: none;
+    }
+    .hide{
+        display: none;
+    }
+    .topnav__search i{
+        display: none;
+    }
+}

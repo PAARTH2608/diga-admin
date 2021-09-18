@@ -1,0 +1,23 @@
+[
+    {
+        "display_name": "Payments",
+        "route": "/payments"
+    },
+    {
+        "display_name": "Reports",
+        "route": "/reports"
+    },
+    {
+        "display_name": "Lenders",
+        "route": "/lenders"
+    },
+    {
+        "display_name": "Renters",
+        "route": "/renters"
+    },
+    {
+        "display_name": "Logout",
+        "route": "/"
+        
+    }
+]

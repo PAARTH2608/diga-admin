@@ -1,0 +1,154 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
+.lenders-main{
+    width: 100%;
+    height: 20vh;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    font-family: "Spartan";
+    margin-bottom: 2vh;
+}
+.lenders-image {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.lenders-image > img {
+    width: 100%;
+}
+.lenders-details{
+    width:20%;
+}
+.lenders-name{
+    width: 65%;
+}
+.image{
+    width: 15%;
+    padding: 30px 20px;
+}
+.lenders-name{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    text-transform: uppercase;
+}
+.lenders-name .lender,
+.lenders-name .car-name{
+    padding-bottom: 2vh;
+}
+.lenders-name h2{
+    font-weight: 800;
+    font-size:1.5rem;
+}
+.lenders-name p{
+    font-weight: 600;
+}
+.lenders-details{
+    display: flex;
+    align-items: center;
+}
+.lenders-details a{
+    text-decoration: underline;
+    font-size: 1.2rem;
+    color: rgb(88, 221, 88);
+}
+@media all and (max-width: 1930px){
+    .lenders-image{
+        margin:  auto 0;
+        height: 120px;
+        width: 120px;
+    }
+    .lenders-name .lender{
+        font-size: 2.7rem;
+    }
+    .lenders-name .car-name,
+    .lenders-details a{
+        font-size: 1.7rem;
+    }
+}
+@media all and (max-width: 1650px){
+    .lenders-image{
+        margin:  auto;
+        transform: translateY(-8%);
+    }
+    .lenders-name .lender{
+        font-size: 1.7rem;
+    }
+    .lenders-name .car-name,
+    .lenders-details a{
+        font-size: 1.4rem;
+    }
+}
+@media all and (max-width: 1500px){
+    .lenders-image{
+        margin: auto;
+        transform: translateY(0%);
+    }
+    .lenders-name .lender{
+        font-size: 1.4em;
+    }
+    .lenders-name .car-name,
+    .lenders-details a{
+        font-size: 1.2rem;
+    }
+    .lenders-name{
+        padding-left: 30px;
+    }
+}
+@media all and (max-width: 1400px){
+    .lenders-image {
+        width: 80px;
+        height: 80px;
+    }
+}
+@media all and (max-width: 1250px){
+    .image{
+        width: 25% !important;
+    }
+    .lenders-image{
+        margin-top: 40%;
+        transform: translateY(-75%);
+    }
+}
+@media all and (max-width: 912px){
+    .lenders-image{
+        margin: auto;
+        transform: translateY(35%);
+    }
+}
+@media all and (max-width: 850px){
+    .lenders-image{
+        margin: auto;
+        transform: translateY(35%);
+    }
+}
+@media all and (max-width: 690px){
+    .lenders-image{
+        width: 80px;
+        height: 80px;
+    }
+    .lenders-name .car-name,
+    .lenders-details a{
+        font-size: 0.8rem;
+    }
+    .lenders-name .lender{
+        font-size: 1.5em;
+    }
+}
+@media all and (max-width: 480px){
+    .lenders-name .lender{
+        font-size: 1.2em;
+    }
+    /* .lenders-image{
+        width: 80px;
+        height: 80px;
+    } */
+    .lenders-name{
+        padding-left: 10px;
+        width: 50%;
+    }
+}

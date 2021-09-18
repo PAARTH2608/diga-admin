@@ -1,0 +1,194 @@
+@import url('https://fonts.googleapis.com/css2?family=Spartan:wght@300&display=swap');
+.reports-main{
+    width: 100%;
+    height: fit-content;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    font-family: "Spartan";
+    margin-bottom: 2vh;
+}
+
+/* for some time */
+.reports-icon {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    overflow: hidden;
+}
+
+.reports-icon > img {
+    width: 100%;
+}
+
+.name-text .name{
+    text-transform: uppercase;
+    font-size: 1.5rem;
+}
+.name-text h2{
+    font-weight: 900;
+}
+.name-text .text{
+    font-size: 0.8rem;
+}
+.name-text .small-para{
+    width: 70%;
+    padding-top: 15px;
+}
+.name-text .small-para p{
+    font-weight: 800;
+}
+.name-text{
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content:space-around;
+    /* align-items: center; */
+    align-items: flex-start;
+}
+.reports-buttons{
+    padding: 50px;
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.reports-buttons button{
+    padding: 9px;
+    margin: 10px;
+    border-radius: 30px;
+    background-color: white;
+    border: 2px solid blue;
+    width: 100%;
+}
+.reports-buttons #btn-1{
+    color: red;
+    font-weight: 650;
+    font-size: 1rem;
+    font-family: "Spartan";
+}
+.reports-buttons #btn-2{
+    color: rgb(59, 224, 59);
+    font-weight: 650;
+    font-size: 1rem;
+    font-family: "Spartan";
+}
+.image{
+    width: 40%;
+}
+@media all and (max-width: 1930px){
+    .reports-main{
+        padding-top: 15px;
+    }
+    .name-text .small-para p{
+        font-size:15px;
+    }
+}
+@media all and (max-width: 1730px){
+    .name-text{
+        padding-top: 10px;
+    }
+}
+@media all and (max-width: 1400px) {
+    .name-text .small-para{
+        padding-top: 6px;
+    }
+    .reports-buttons{
+        padding-left: 0;
+    }
+    .reports-main{
+        padding-top: 10px;
+    }
+}
+@media all and (max-width: 1350px){
+    .name-text h2{
+        font-size: 20px;
+    }
+    .name-text .small-para p{
+        font-size: 13px;
+    }
+    .reports-buttons{
+        padding-right: 20px;
+        transform: translateY(-5%);
+    }
+}
+@media all and (max-width: 1066px){
+    .reports-icon{
+        transform: translateY(50%);
+    }
+    .name-text .small-para p{
+        font-size: 1rem;
+    }
+    .name-text .name{
+        font-size: 1.5rem;
+    }
+    .reports-icon {
+        width: 120px;
+        height: 120px;
+    }
+    .reports-main{
+        padding-top: 0;
+    }
+    .name-text p{
+        transform: translateY(-20%);
+    }
+}
+@media all and (max-width: 912px){
+    .name-text .small-para p{
+        font-size: 1rem;
+        margin-top: 30px;
+    }
+    .name-text .name{
+        margin-top: 10px;
+    }
+    .name-text .small-para{
+        width: 90%;
+    }
+    .image{
+        transform: translateY(-25%);
+    }
+}
+@media all and (max-width: 712px){
+    .name-text .small-para p{
+        font-size: 0.6rem;
+        margin-top: 30px;
+    }
+    .name-text .name{
+        font-size: 1rem;
+    }
+    .name-text .small-para{
+        width: 90%;
+    }
+    .image{
+        transform: translateY(-25%);
+    }
+    .reports-icon {
+        width: 80px;
+        height: 80px;
+    }
+    .reports-buttons #btn-1,
+    .reports-buttons #btn-2{
+        padding: 5px;
+        font-size: 0.6rem;
+    }
+}
+@media all and (max-width: 480px){
+    .image{
+        width: 30%;
+    }
+    .reports-icon {
+        width: 60px;
+        height: 60px;
+        transform: translateY(50%)
+    }
+}
+@media all and (max-width: 400px){
+    .name-text .name{
+        padding-top: 10px;
+    }
+    .name-text .small-para{
+        transform: translateY(-10%);
+    }
+}

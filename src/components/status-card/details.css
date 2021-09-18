@@ -1,0 +1,241 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+body{
+    font-family: "roboto";
+}
+.details-card{
+    width: 100%;
+    height: auto !important;
+    border-radius: 10px;
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    margin-bottom: 2vh;
+}
+.details-card__icon i{
+    font-size: 90px;
+    position: relative;
+    top: 20%;
+}
+.status-card__info{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+.payment-method{
+    display: flex;
+    flex-direction: row;
+}
+.name-money,
+.car-details-time,
+.payment-batch,
+.payment-method{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+.details-card__icon,
+.status-card__info{
+    padding: 8px 15px;
+}
+.name-money,
+.car-details-time,
+.payment-method{
+    padding-top: 5px;
+}
+.status-card__info .name-money h2{
+    font-weight:400;
+}
+.status-card__info .name-money h2,
+.status-card__info .name-money  p{
+    font-family: "roboto";
+    font-size: 2rem;
+}
+.car-details-time h2{
+    font-size:1.3rem;
+    font-weight:400;
+}
+.car-details-time{
+    padding-top: 10px;
+}
+.payment-method{
+    padding-top: 20px;
+}
+.payment-method .via h2{
+    font-size:1.2rem;
+    font-weight:300;
+}
+.via-2{
+    display: flex;
+    padding-bottom: 20px;
+}
+.receipt{
+    font-size:1.3rem;
+    padding-right: 40px;
+    padding-top: 15px;
+}
+.receipt a{
+    color: rgb(147, 204, 62);
+    text-decoration: underline;
+}
+.payment-batch h2{
+    font-size:1.1rem;
+    padding-top: 7px;
+}
+.status-card__info{
+    padding-right: 80px;
+}
+.payment-batch i{
+    font-size: 2rem;
+    padding-right: 10px;
+}
+
+
+/* media queries */
+@media all and (max-width: 1930px){
+    .name-money{
+        padding-top: 20px;
+    }
+    .status-card__info .name-money h2{
+        font-size: 2.5rem;
+    }
+}
+@media all and (max-width: 1550px){
+    .status-card__info{
+        padding-top: 0;
+    }
+    .status-card__info .name-money h2{
+        font-size: 2rem;
+    }
+    .receipt{
+        transform: translateY(-30%);
+    }
+}
+@media all and (max-width: 1420px){
+    .payment-method{
+        padding-top: 10px;
+    }
+}
+@media all and (max-width: 1250px){
+    .status-card__info{
+        height: auto
+    }
+    .details-card__icon i{
+        font-size:5rem;
+    }
+    .status-card__info .name-money{
+        text-align: left;
+    }
+    .status-card__info .name-money h2{
+        font-size: 2rem;
+    }
+    .status-card__info .name-money p{
+        font-size: 1.6rem;
+    }
+    .status-card__info{
+        padding-right: 40px;
+    }
+    /* .car-details-time{
+        padding-top: 40px;
+    } */
+    .car-details-time h2{
+        font-size: 1.7rem;
+    }
+    .car-details-time p{
+        font-size: 1.4rem;
+    }
+    .payment-method{
+        /* padding-top:30px; */
+        /* padding-right: 20px; */
+    }
+    .receipt{
+        padding-right: 20px;
+    }
+}
+@media all and (max-width: 1066px){
+    .details-card{
+        height: 15vh;
+    }
+}
+@media all and (max-width: 868px){
+    .details-card__icon i{
+        font-size: 2.5rem;
+    }
+    .status-card__info .name-money h2{
+        font-size:27px;
+        font-weight:700;
+    }
+    .car-details-time{
+        padding-top: 10px;
+    }
+    .payment-method{
+        padding-top: 15px;
+    }
+}
+@media all and (max-width: 712px){
+    .status-card__info{
+        padding-left: 0;
+    }
+    .status-card__info .name-money h2,
+    .status-card__info .name-money p{
+        font-size: 1rem;
+    }
+    .car-details-time h2,
+    .car-details-time p{
+        font-size: 1rem;
+    }
+    .status-card__info{
+        padding-right: 20px;
+    }
+    .car-details-time{
+        padding-top: 5px;
+    }
+    .payment-batch h2{
+        padding-top: 0;
+    }
+    .payment-batch h2,
+    .payment-method .via h2,
+    .payment-method .via-2 .receipt a{
+        font-size: .7rem;
+    }
+    .payment-batch i{
+        transform: translateY(-20%);
+    }
+    .payment-method .via-2 .receipt {
+        padding-bottom: 20px;
+    }
+}
+@media all and (max-width: 480px){
+    .details-card__icon i{
+        font-size: 1.6rem;
+        transform: translateY(50%);
+    }
+    .status-card__info .name-money h2,
+    .status-card__info .name-money p{
+        font-size: 1rem;
+    }
+    .car-details-time h2,
+    .car-details-time p{
+        font-size: 0.8rem;
+    }
+    .name-money{
+        padding-top: 10px;
+    }
+    .details-card__icon{
+        padding-right: 10px;
+    }
+    .payment-method{
+        padding-top: 5px;
+    }
+    .receipt{
+        padding-right: 5px;
+    }
+}
+@media all and (max-width: 400px){
+    .car-details-time{
+        padding-top: 0;
+    }
+    .payment-batch i{
+        padding-right: 0;
+    }
+}
