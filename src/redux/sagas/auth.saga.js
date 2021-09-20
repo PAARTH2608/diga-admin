@@ -22,8 +22,7 @@ export function* getBookings(token) {
     if (bookings.error) {
       yield put({type: AuthTypes.BOOKINGS_ERROR, error: bookings.message});
     } else {
-      yield put({type: AuthTypes.BOOKINGS_SUCCESS, data: bookings});
-      
+      yield put({type: AuthTypes.BOOKINGS_SUCCESS, data: bookings});  
     }
   } catch (error) {
     yield put({type: AuthTypes.BOOKINGS_ERROR, error});

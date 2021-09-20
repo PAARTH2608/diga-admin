@@ -5,7 +5,9 @@ import { getBookings, getReports } from '../redux/actions/auth.action';
 const Dashboard = props => {
 
     const token = useSelector(state => state.auth.token);
+    console.log("payments token", token)
     const dispatch = useDispatch();
+
     
     useEffect(() => {
         dispatch(getBookings({token: token}));

@@ -7,7 +7,6 @@ const initialState = {
   token: '',
   showLanding: false,
   validCredentials: false,
-  message: ' ',
   isLoggedIn: false
 };
 
@@ -20,11 +19,11 @@ const AuthReducer = (state = initialState, action) => {
         token: action.data.token,
         showLanding: !state.showLanding,
         validCredentials: true,
-        isLoggedIn: true
+        isLoggedIn: true,
       }
     case AuthTypes.LOGIN_ERROR:
       return {
-        message: action.data.error,
+        message: action.error,
         validCredentials:false,
         isLoggedIn: false
       }

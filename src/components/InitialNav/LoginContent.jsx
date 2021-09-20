@@ -20,7 +20,6 @@ const LoginContent = props => {
         const isUserIdValid = userID.length > 0;
         const isPasswordValid = password.length > 0;
         
-        
         if (!isUserIdValid || !isPasswordValid) {
             setError(true);
             return
@@ -31,10 +30,8 @@ const LoginContent = props => {
     }
     if(isLoggedIn){
         history.push('/payments')
-    }
-
+    }   
     
-
     return (
         <>
         <form className="login-content" onSubmit={toggleLandingHandler}>
@@ -53,7 +50,6 @@ const LoginContent = props => {
                 <button type="submit" value="Send">Sign In</button>
             </div>
             {error && <p className="error-bottom">*Fields cannot be empty</p>}
-            
         </form>
         
         </>
