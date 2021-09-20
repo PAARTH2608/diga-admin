@@ -11,26 +11,29 @@ const LoginContent = props => {
 
     const dispatch = useDispatch();
     let history = useHistory();
-    
 
-    const toggleLandingHandler = () => {
-
+    const toggleLandingHandler = e => {
+        e.preventDefault();
         console.log(userIdInputRef.current.value, passwordInputRef.current.value);
         const userID = userIdInputRef.current.value;
         const password = passwordInputRef.current.value;
         const isUserIdValid = userID.length > 0;
         const isPasswordValid = password.length > 0;
         
+        
         if (!isUserIdValid || !isPasswordValid) {
             setError(true);
             return
         }
+        setError(false)
         dispatch(login({ phone: userID, password: password }));
         history.push('/payments') 
     }
+    
 
     return (
-        <div className="login-content">
+        <>
+        <form className="login-content" onSubmit={toggleLandingHandler}>
             <div className="login-page-logo">
                 <img src="" alt="login-logo"></img>
             </div>
@@ -43,10 +46,13 @@ const LoginContent = props => {
                 <input placeholder="Enter your Password" type="Password" ref={passwordInputRef}></input>
             </div>
             <div className="btn">
-                <button onClick={toggleLandingHandler}>Sign In</button>
+                <button type="submit" value="Send">Sign In</button>
             </div>
             {error && <p className="error-bottom">*Fields cannot be empty</p>}
-        </div>
+            
+        </form>
+        
+        </>
     )
 }
 

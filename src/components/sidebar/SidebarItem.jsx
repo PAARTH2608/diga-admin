@@ -1,7 +1,7 @@
 import React, { Fragment } from 'react';
 import { useDispatch } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-import { logout } from '../../redux/actions/auth.action';
+import { logout, showLanding } from '../../redux/actions/auth.action';
 
 const SidebarItem = props => {
     const active = props.active ? 'active' : '';
@@ -15,6 +15,7 @@ const SidebarItem = props => {
         }
         else{
             dispatch(logout());
+            dispatch(showLanding())
             history.push('/');
         }
     }

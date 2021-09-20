@@ -1,7 +1,7 @@
 import React, { useEffect } from 'react';
 import { useDispatch, useSelector } from 'react-redux'
 import Details from '../components/status-card/details';
-import { getBookings } from '../redux/actions/auth.action';
+import { getBookings, getReports } from '../redux/actions/auth.action';
 const Dashboard = props => {
 
     const token = useSelector(state => state.auth.token);
@@ -9,6 +9,7 @@ const Dashboard = props => {
     
     useEffect(() => {
         dispatch(getBookings({token: token}));
+        dispatch(getReports({token: token}));
     })
 
     

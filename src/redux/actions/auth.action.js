@@ -26,7 +26,23 @@ export const showLanding = () => ({
   type: AuthTypes.TOGGLE
 });
 
+export const getReports = (token) => ({
+  type: AuthTypes.REPORTS_REQUEST,
+  payload: token
+})
+export const haveReports = (reports) => ({
+  type: AuthTypes.REPORTS_SUCCESS,
+  payload: reports
+})
 
+export const reInstate = credentials => ({
+  type: AuthTypes.REINSTATE_REQUEST,
+  payload: credentials
+})
+export const suspend = credentials => ({
+  type: AuthTypes.SUSPEND_REQUEST,
+  payload: credentials
+})
 export function searchText(text){
     return {
         type: AuthTypes.SEARCH,

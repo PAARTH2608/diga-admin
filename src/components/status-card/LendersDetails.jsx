@@ -5,7 +5,7 @@ import './LendersDetails.css';
 import { useSelector } from 'react-redux';
 
 const LendersDetails = () => {
-    const searchterm = useSelector(state => state.filters.term)
+    const searchterm = useSelector(state => state.filters.term);
     const lendersDetails = useSelector(state => state.bookings.adminInfoDetails);
     // eslint-disable-next-line
     const lenders = lendersDetails.filter(item => {

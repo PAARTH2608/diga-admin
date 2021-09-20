@@ -7,7 +7,8 @@ const initialState = {
   password: '',
   token: '',
   showLanding: false,
-  validCredentials: false
+  validCredentials: false,
+  message: ' '
 };
 
 const AuthReducer = (state = initialState, action) => {
@@ -18,7 +19,7 @@ const AuthReducer = (state = initialState, action) => {
         phone: action.data.adminInfo.phone,
         token: action.data.token,
         showLanding: !state.showLanding,
-        validCredentials: !state.validCredentials
+        validCredentials: true
       }
     case AuthTypes.LOGIN_ERROR:
       return {

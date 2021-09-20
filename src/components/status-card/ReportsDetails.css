@@ -5,6 +5,7 @@
     border-radius: 10px;
     display: flex;
     flex-direction: row;
+    justify-content: space-between;
     background-color: #fff;
     font-family: "Spartan";
     margin-bottom: 2vh;
@@ -44,7 +45,6 @@
     display: flex;
     flex-direction: column;
     justify-content:space-around;
-    /* align-items: center; */
     align-items: flex-start;
 }
 .reports-buttons{
@@ -56,12 +56,12 @@
     justify-content: center;
 }
 .reports-buttons button{
-    padding: 9px;
+    padding: 18px;
     margin: 10px;
     border-radius: 30px;
     background-color: white;
     border: 2px solid blue;
-    width: 100%;
+    width: 80%;
 }
 .reports-buttons #btn-1{
     color: red;
@@ -77,6 +77,27 @@
 }
 .image{
     width: 40%;
+}
+.reinstated,
+.suspended{
+    font-size: 1rem;
+    font-weight: 500;
+    color: red;
+}
+.features{
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    height: 10vh;
+    background-color: white;
+    margin: 0 0 2% 0;
+    border-radius: 10px;
+}
+.btn-class{
+    position: absolute;
+    
 }
 @media all and (max-width: 1930px){
     .reports-main{
@@ -115,9 +136,6 @@
     }
 }
 @media all and (max-width: 1066px){
-    .reports-icon{
-        transform: translateY(50%);
-    }
     .name-text .small-para p{
         font-size: 1rem;
     }
@@ -146,9 +164,6 @@
     .name-text .small-para{
         width: 90%;
     }
-    .image{
-        transform: translateY(-25%);
-    }
 }
 @media all and (max-width: 712px){
     .name-text .small-para p{
@@ -160,9 +175,6 @@
     }
     .name-text .small-para{
         width: 90%;
-    }
-    .image{
-        transform: translateY(-25%);
     }
     .reports-icon {
         width: 80px;

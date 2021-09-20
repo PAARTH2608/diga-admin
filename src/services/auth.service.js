@@ -29,17 +29,49 @@ class AuthService {
 			throw error;
 		}
 	}
-  // async getVehicles(token){
-  //   console.log(token);
-  //   try{
-  //     const response = await Axios.post(`${BASE_API_URL}/admin/getVehicles`, token);
-  //     return response.data;
-  //   }
-  //   catch(err){
-  //     console.log(err);
-  //     throw err;
-  //   }
-  // }
+
+  async getReports(token) {
+		try {
+			const response = await Axios.post(
+				`${BASE_API_URL}/admin/getReports`,
+				token
+			);
+			console.log('reports results', response.data);
+			return response.data;
+		} catch (error) {
+			console.log(error);
+			throw error;
+		}
+	}
+
+	async reInstate(credentials) {
+		try {
+			const response = await Axios.post(
+				`${BASE_API_URL}/admin/reinstate`,
+				credentials
+			);
+			console.log('message are here ', response.data);
+			return response.data;
+		} catch (error) {
+			console.log(error);
+			throw error;
+		}
+	}
+
+	async suspend(credentials) {
+		try {
+			const response = await Axios.post(
+				`${BASE_API_URL}/admin/suspend`,
+				credentials
+			);
+			console.log('message are here ', response.data);
+			return response.data;
+		} catch (error) {
+			console.log(error);
+			throw error;
+		}
+	}
+  
 }
 
 export default AuthService;
