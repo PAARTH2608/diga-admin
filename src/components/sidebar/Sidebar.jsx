@@ -25,6 +25,7 @@ const Sidebar = props => {
     }, []);
 
     const activeItem = sidebar_items.findIndex(item => item.route === props.location.pathname)
+
     const handler = () => {
         setSidebar(state => !state);
     }
@@ -43,7 +44,7 @@ const Sidebar = props => {
                             <SidebarItem
                                 title={item.display_name}
                                 active={index === activeItem}
-                                
+                                onClicking={handler}
                             />
                         </Link>
                     ))
@@ -52,33 +53,22 @@ const Sidebar = props => {
             {isMobile && (
                 <Fragment>
                     <div className="sidebar-toggle">
-                        {sidebar ? (
-                            <Icons.FaTimes
-                                className="sidebar-toggle-logo"
-                                onClick={() => setSidebar(!sidebar)}
-                            />
-                        ) : (
-                            <Icons.FaBars
-                                className="sidebar-toggle-logo"
-                                onClick={() => setSidebar(!sidebar)}
-                            />
-                        )}
+                        <Icons.FaBars
+                            className="sidebar-toggle-logo"
+                            onClick={() => setSidebar(!sidebar)}
+                        />
                     </div>
                     {sidebar && (
                         <Fragment>
 
                             <div className='sidebar-1'>
-                                <Icons.FaTimes
-                                    className="sidebar-toggle-logo hidden"
-                                    onClick={() => setSidebar(!sidebar)}
-                                />
                                 {
                                     sidebar_items.map((item, index) => (
                                         <Link to={item.route} key={index}>
                                             <SidebarItem
                                                 title={item.display_name}
                                                 active={index === activeItem}
-                                                onClick={handler}
+                                                onClicking={handler}
                                                 route={item.route}
                                             />
                                         </Link>

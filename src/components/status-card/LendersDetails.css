@@ -2,9 +2,9 @@
 .lenders-main{
     width: 100%;
     height: 20vh;
-    border-radius: 10px;
     display: flex;
     flex-direction: row;
+    border-radius: 10px;
     background-color: #fff;
     font-family: "Spartan";
     margin-bottom: 2vh;
@@ -21,6 +21,9 @@
 }
 .lenders-details{
     width:20%;
+}
+.lenders-details button{
+    background-color: white;
 }
 .lenders-name{
     width: 65%;
@@ -51,7 +54,7 @@
     display: flex;
     align-items: center;
 }
-.lenders-details a{
+.lenders-details button{
     text-decoration: underline;
     font-size: 1.2rem;
     color: rgb(88, 221, 88);
@@ -66,7 +69,7 @@
         font-size: 2.7rem;
     }
     .lenders-name .car-name,
-    .lenders-details a{
+    .lenders-details button{
         font-size: 1.7rem;
     }
 }
@@ -79,7 +82,7 @@
         font-size: 1.7rem;
     }
     .lenders-name .car-name,
-    .lenders-details a{
+    .lenders-details button{
         font-size: 1.4rem;
     }
 }
@@ -92,7 +95,7 @@
         font-size: 1.4em;
     }
     .lenders-name .car-name,
-    .lenders-details a{
+    .lenders-details button{
         font-size: 1.2rem;
     }
     .lenders-name{
@@ -132,7 +135,7 @@
         height: 80px;
     }
     .lenders-name .car-name,
-    .lenders-details a{
+    .lenders-details button{
         font-size: 0.8rem;
     }
     .lenders-name .lender{
@@ -143,12 +146,10 @@
     .lenders-name .lender{
         font-size: 1.2em;
     }
-    /* .lenders-image{
-        width: 80px;
-        height: 80px;
-    } */
     .lenders-name{
         padding-left: 10px;
         width: 50%;
+    }.image{
+        transform: translateY(-15%);
     }
 }

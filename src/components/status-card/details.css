@@ -67,14 +67,13 @@ body{
 }
 .via-2{
     display: flex;
-    padding-bottom: 20px;
 }
 .receipt{
     font-size:1.3rem;
     padding-right: 40px;
     padding-top: 15px;
 }
-.receipt a{
+.receipt button{
     color: rgb(147, 204, 62);
     text-decoration: underline;
 }
@@ -135,18 +134,11 @@ body{
     .status-card__info{
         padding-right: 40px;
     }
-    /* .car-details-time{
-        padding-top: 40px;
-    } */
     .car-details-time h2{
         font-size: 1.7rem;
     }
     .car-details-time p{
         font-size: 1.4rem;
-    }
-    .payment-method{
-        /* padding-top:30px; */
-        /* padding-right: 20px; */
     }
     .receipt{
         padding-right: 20px;
@@ -195,7 +187,7 @@ body{
     }
     .payment-batch h2,
     .payment-method .via h2,
-    .payment-method .via-2 .receipt a{
+    .payment-method .via-2 .receipt button{
         font-size: .7rem;
     }
     .payment-batch i{

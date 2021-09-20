@@ -1,0 +1,26 @@
+.helper-main{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: space-around;
+    background-color: white;
+    border-radius: 10px;
+    position: relative;
+    padding: 2%;
+    margin: 2%;
+    /* height: fit-content;
+    width: 50vw;
+    margin: 15% auto;
+    border: 2px solid rgb(223, 79, 79) */
+}
+.helper-btn{
+    position: absolute;
+    top: 4%;
+    right: 2%;
+}
+.helper-btn-btn{
+    font-weight: 600;
+}
+h2{
+    font-size: 1rem;
+}

@@ -1,13 +1,21 @@
-
-import React from 'react';
+import React, { useState } from 'react';
 import { useSelector } from 'react-redux';
 import './details.css';
+import HelperModal from '../InitialNav/HelperModal'
 
 const Details = props => {
+    const [modal, setModal] = useState(false)
     
     const searchterm = useSelector(state => state.filters.term)
-    const details = useSelector(state => state.bookings.adminInfoDetails);    
-        
+    const details = useSelector(state => state.bookings.adminInfoDetails);  
+    console.log("payments here ", details)  
+
+    const closeModalHandler = () => {
+        setModal(false);
+    }
+    const openModalHandler = () => {
+        setModal(true);
+    }
     // eslint-disable-next-line
     const paymentItems = details.filter(item => {
         if(!searchterm) return true
@@ -15,6 +23,7 @@ const Details = props => {
             return true
         }
     }).map(item => (
+        <>
         <div className='details-card' key={item._id}>
             <div className="details-card__icon">
                 <i className="bx bx-cart"></i>
@@ -34,7 +43,7 @@ const Details = props => {
                     </div>
                     <div className="via-2">
                         <div className="receipt">
-                            <a href="/">RECEIPT</a>
+                            <button onClick={openModalHandler}>RECEIPT</button>
                         </div>
                         <div className="payment-batch">
                             <i className="bx bx-cart"></i>
@@ -44,6 +53,21 @@ const Details = props => {
                 </div>
             </div>
         </div>
+        <HelperModal 
+        lender={item.lender.name} 
+        renter={item.renter.name} 
+        durationFrom={item.date.from} 
+        durationTo={item.date.to} 
+        amount={item.payment.amount} 
+        desc1={item.vehicle.name} 
+        desc2={item.vehicle.model} 
+        desc3={item.vehicle.regno}
+        closeModalHandler={closeModalHandler}
+        modal={modal}
+        key={item._id}
+        paymentSuccess={item.paymentAccepted}
+    />
+    </>
     ))
     return (
         <>

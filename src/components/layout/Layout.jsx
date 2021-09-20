@@ -6,6 +6,7 @@ import Routes from '../Routes'
 import { BrowserRouter, Route } from 'react-router-dom';
 import Logout from '../../pages/Logout';
 import { useSelector } from 'react-redux';
+// import HelperModal from '../InitialNav/HelperModal'
 
 const Layout = () => {
     const show = useSelector(state => state.auth.showLanding);
@@ -22,6 +23,20 @@ const Layout = () => {
                             <div className="layout__content-main">
                                 <Routes />
                             </div>
+                        </div>
+                        <div className="helpermodal">
+                        {/* <HelperModal
+                            lender="name" 
+                            renter="name"
+                            durationFrom="name" 
+                            durationTo="name" 
+                            amount="name" 
+                            desc1="name" 
+                            desc2="name"
+                            desc3="name"
+                            closeModalHandler="name"
+                            modal="name"
+                        /> */}
                         </div>
                     </div>}
                 </>

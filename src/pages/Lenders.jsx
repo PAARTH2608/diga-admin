@@ -1,5 +1,6 @@
 import React from 'react'
 import LendersDetails from '../components/status-card/LendersDetails';
+
 const Lenders = () => {
     return (
         <div>
