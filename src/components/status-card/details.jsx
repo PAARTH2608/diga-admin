@@ -7,10 +7,7 @@ const Details = props => {
     
     const searchterm = useSelector(state => state.filters.term)
     const details = useSelector(state => state.bookings.adminInfoDetails);    
-    console.log(details);
-    
-
-    
+        
     // eslint-disable-next-line
     const paymentItems = details.filter(item => {
         if(!searchterm) return true

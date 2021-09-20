@@ -6,7 +6,7 @@ class AuthService {
     // console.log(cred)
     try {
       const response = await Axios.post(`${BASE_API_URL}/admin/login`, cred);
-      console.log("hehehehe");
+    //   console.log("hehehehe");
       return response.data;
     } 
     catch (error) {
@@ -22,7 +22,7 @@ class AuthService {
 				`${BASE_API_URL}/admin/getBookings`,
 				token
 			);
-			console.log('hehoheho', response.data);
+			// console.log('hehoheho', response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -36,7 +36,7 @@ class AuthService {
 				`${BASE_API_URL}/admin/getReports`,
 				token
 			);
-			console.log('reports results', response.data);
+			// console.log('reports results', response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -50,7 +50,7 @@ class AuthService {
 				`${BASE_API_URL}/admin/reinstate`,
 				credentials
 			);
-			console.log('message are here ', response.data);
+			// console.log('message are here ', response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);
@@ -64,7 +64,7 @@ class AuthService {
 				`${BASE_API_URL}/admin/suspend`,
 				credentials
 			);
-			console.log('message are here ', response.data);
+			// console.log('message are here ', response.data);
 			return response.data;
 		} catch (error) {
 			console.log(error);

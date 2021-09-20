@@ -3,7 +3,6 @@ import createSagaMiddleware from 'redux-saga';
 import { createLogger } from 'redux-logger';
 // eslint-disable-next-line
 export default (rootReducer, rootSaga) => {
-  console.log("heya")
   const middlewares = [];
   const enhancers = [];
 

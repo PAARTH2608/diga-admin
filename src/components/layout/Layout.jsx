@@ -9,14 +9,12 @@ import { useSelector } from 'react-redux';
 
 const Layout = () => {
     const show = useSelector(state => state.auth.showLanding);
-    const valid = useSelector(state => state.auth.validCredentials);
-    console.log("layout",valid)
-
+    
     return (
         <BrowserRouter>
             <Route render={(props) => (
                 <>
-                    {!show && <Logout valid={valid}/>}
+                    {!show && <Logout/>}
                     { show && <div className="layout">
                         <Sidebar {...props} />
                         <div className="layout__content">

@@ -1,7 +1,6 @@
 import {AuthTypes} from '../types';
 
 const initialState = {
-  
   message: '',
 };
 

@@ -15,7 +15,7 @@ const SidebarItem = props => {
         }
         else{
             dispatch(logout());
-            dispatch(showLanding())
+            // dispatch(showLanding())
             history.push('/');
         }
     }

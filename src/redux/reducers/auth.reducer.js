@@ -2,13 +2,13 @@ import {AuthTypes} from '../types';
 
 const initialState = {
   loading: false,
-  error: null,
   phone: '',
   password: '',
   token: '',
   showLanding: false,
   validCredentials: false,
-  message: ' '
+  message: ' ',
+  isLoggedIn: false
 };
 
 const AuthReducer = (state = initialState, action) => {
@@ -19,12 +19,14 @@ const AuthReducer = (state = initialState, action) => {
         phone: action.data.adminInfo.phone,
         token: action.data.token,
         showLanding: !state.showLanding,
-        validCredentials: true
+        validCredentials: true,
+        isLoggedIn: true
       }
     case AuthTypes.LOGIN_ERROR:
       return {
         message: action.data.error,
-        validCredentials:false
+        validCredentials:false,
+        isLoggedIn: false
       }
     case AuthTypes.LOGOUT_REQUEST:
       return {
@@ -32,7 +34,8 @@ const AuthReducer = (state = initialState, action) => {
         phone: '',
         password: '',
         token: '',
-        showLanding: false
+        showLanding: false,
+        isLoggedIn: false
       };
     default:
       return state;

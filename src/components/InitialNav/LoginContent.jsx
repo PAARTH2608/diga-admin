@@ -1,8 +1,7 @@
 import React, { useRef, useState } from 'react';
 import './LoginContent.css';
-import { useDispatch } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { useHistory } from 'react-router-dom';
-// import { uiActions } from '../../store/ui-slice';
 import { login } from '../../redux/actions/auth.action';
 const LoginContent = props => {
     const [error, setError] = useState(false);
@@ -12,9 +11,10 @@ const LoginContent = props => {
     const dispatch = useDispatch();
     let history = useHistory();
 
+    const isLoggedIn = useSelector(state => state.auth.isLoggedIn);
+
     const toggleLandingHandler = e => {
         e.preventDefault();
-        console.log(userIdInputRef.current.value, passwordInputRef.current.value);
         const userID = userIdInputRef.current.value;
         const password = passwordInputRef.current.value;
         const isUserIdValid = userID.length > 0;
@@ -29,6 +29,10 @@ const LoginContent = props => {
         dispatch(login({ phone: userID, password: password }));
         history.push('/payments') 
     }
+    if(isLoggedIn){
+        history.push('/payments')
+    }
+
     
 
     return (

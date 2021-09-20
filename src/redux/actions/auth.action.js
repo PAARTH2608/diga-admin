@@ -1,5 +1,4 @@
 import {AuthTypes} from '../types';
-// import { BOOKINGS_SUCCESS } from '../types/auth.types';
 
 export const login = (data) => ({
   type: AuthTypes.LOGIN_REQUEST,
@@ -12,6 +11,8 @@ export const loggenIn = (user) => ({
   type: AuthTypes.LOGIN_SUCCESS,
   payload: user,
 });
+
+
 export const getBookings = (token) => ({
   type: AuthTypes.BOOKINGS_REQUEST,
   payload: token
@@ -45,8 +46,8 @@ export const suspend = credentials => ({
 })
 export function searchText(text){
     return {
-        type: AuthTypes.SEARCH,
-        payload: text
+      type: AuthTypes.SEARCH,
+      payload: text
     }
 }
 

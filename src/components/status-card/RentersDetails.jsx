@@ -23,7 +23,7 @@ const RentersDetails = () => {
                     <p className="car-name">{renter.vehicle.name}</p>
                 </div>
                 <div className="renters-details">
-                    <a href="/">{renter.renter_detail}</a>
+                    <a href="/">DETAILS</a>
                 </div>
             </div>
     ))

@@ -50,7 +50,6 @@ const Topnav = props => {
 
     const name = useSelector(state => state.auth.name);
     curr_user.display_name = name;
-    // props.searchData(searchTerm)
     return (
         <div className='topnav'>
 

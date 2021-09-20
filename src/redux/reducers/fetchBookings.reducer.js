@@ -5,10 +5,9 @@ const initialState = {
 };
 
 const BookingsReducer = (state = initialState, action) => {
-    // console.log("i paarth", action, action.data)
     switch (action.type) {
       case AuthTypes.BOOKINGS_SUCCESS:
-        console.log("its action ",action)
+        // console.log("its action ",action)
         return {
           ...state,
             adminInfoDetails: action.data

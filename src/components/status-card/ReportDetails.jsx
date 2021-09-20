@@ -4,30 +4,6 @@ import user_image from '../../assets/images/paarth.png';
 import { useSelector, useDispatch } from 'react-redux';
 import { reInstate, suspend } from '../../redux/actions/auth.action';
 
-// const reportsArr = [
-//     {
-//         name: "Carmen Sanders To Danielle Murphy",
-//         report: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It.',
-//         id:"611b6bfd86c5df3c41a5322d"
-//     },
-//     {
-//         name: "Narayan To Danielle",
-//         report: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It.',
-//         id:2
-//     }
-//     ,
-//     {
-//         name: "Arun To Danielle Murphy",
-//         report: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It.',
-//         id:3
-//     },
-//     {
-//         name: "Paarth To Danielle Murphy",
-//         report: 'Lorem Ipsum is simply dummy text of the printing and typesetting industry when an unknown printer took a galley of type and scrambled it to make a type specimen book. It.',
-//         id:4
-//     }
-// ];
-
 const ReportDetails = () => {
     const [modal, setModal] = useState(false);
     const [reinstated, setReinstate] = useState(false);
@@ -59,7 +35,7 @@ const ReportDetails = () => {
     // eslint-disable-next-line
     const reports = reportsAr.filter(item => {
         if(!searchterm) return true
-        if(item.name.toLowerCase().includes(searchterm) || item.name.toUpperCase().includes(searchterm)){
+        if(item.against.name.toLowerCase().includes(searchterm) || item.against.name.toUpperCase().includes(searchterm) || item.from.name.toLowerCase().includes(searchterm) || item.from.name.toUpperCase().includes(searchterm)){
             return true
         }
     }).map(report => (

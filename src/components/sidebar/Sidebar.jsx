@@ -1,5 +1,4 @@
 import React, { useLayoutEffect } from 'react';
-import { useHistory } from 'react-router-dom'
 import { Link } from 'react-router-dom'
 import './sidebar.css'
 import SidebarItem from './SidebarItem'
@@ -26,9 +25,7 @@ const Sidebar = props => {
     }, []);
 
     const activeItem = sidebar_items.findIndex(item => item.route === props.location.pathname)
-    const history = useHistory();
     const handler = () => {
-        history.push('/login');
         setSidebar(state => !state);
     }
 

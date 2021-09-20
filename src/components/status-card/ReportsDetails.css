@@ -13,8 +13,8 @@
 
 /* for some time */
 .reports-icon {
-    width: 80px;
-    height: 80px;
+    width: 130px;
+    height: 130px;
     border-radius: 50%;
     overflow: hidden;
 }
@@ -76,7 +76,7 @@
     font-family: "Spartan";
 }
 .image{
-    width: 40%;
+    width: 0%;
 }
 .reinstated,
 .suspended{
@@ -106,6 +106,7 @@
     .name-text .small-para p{
         font-size:15px;
     }
+
 }
 @media all and (max-width: 1730px){
     .name-text{
