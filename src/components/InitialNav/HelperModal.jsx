@@ -6,7 +6,7 @@ const HelperModal = props => {
     }
     return (
         <>
-        {props.modal && <div className="helper-main">
+        {props.modal && <div className="helper-main" key={props.key}>
             <div className="helper-btn">
                 <button onClick={closeModal} className="helper-btn-btn">X</button>
             </div>

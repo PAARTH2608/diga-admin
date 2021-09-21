@@ -7,8 +7,6 @@ const Details = props => {
     
     const searchterm = useSelector(state => state.filters.term)
     const details = useSelector(state => state.bookings.adminInfoDetails);  
-    console.log("payments here ", details)  
-
     // eslint-disable-next-line
     const paymentItems = details.filter(item => {
         if(!searchterm) return true
@@ -16,7 +14,6 @@ const Details = props => {
             return true
         }
     }).map(item => (
-        <>
         <MainHelper
             key={item._id} 
             lender={item.lender.name} 
@@ -31,7 +28,6 @@ const Details = props => {
             paymentSuccess={item.paymentAccepted}
             trans={false} 
         />
-    </>
     ))
     return (
         <>

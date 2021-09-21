@@ -12,7 +12,7 @@ const MainHelper = props => {
     }
     return (
 		<>
-			{props.trans && <><div className='lenders-main' key={props.key}>
+			{props.trans && <><div className='lenders-main' >
 				<div className='image'>
 					<div className='lenders-image'>
 						<img src={props.img} alt='img'></img>
@@ -37,10 +37,9 @@ const MainHelper = props => {
 				desc3={props.desc3}
 				closeModalHandler={closeModalHandler}
 				modal={open}
-				key={props.key}
 			/></>}
 
-            {!props.trans && <><div className='details-card' key={props.key}>
+            {!props.trans && <><div className='details-card'>
                 <div className="details-card__icon">
                     <i className="bx bx-cart"></i>
                 </div>
@@ -69,8 +68,7 @@ const MainHelper = props => {
                     </div>
                 </div>
             </div>
-            <HelperModal 
-                key={props.key}
+            <HelperModal
                 lender={props.lender} 
                 renter={props.renter} 
                 durationFrom={props.durationFrom} 

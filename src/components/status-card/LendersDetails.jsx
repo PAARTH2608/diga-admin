@@ -6,7 +6,6 @@ import MainHelper from '../InitialNav/MainHelper';
 const LendersDetails = () => {
     const searchterm = useSelector(state => state.filters.term);
     const lendersDetails = useSelector(state => state.bookings.adminInfoDetails);
-
     // eslint-disable-next-line
     const lenders = lendersDetails.filter(item => {
         if(!searchterm) return true
@@ -14,9 +13,8 @@ const LendersDetails = () => {
             return true
         }
     }).map(lender => (
-        <>
         <MainHelper 
-            key={lender.date._id} 
+            key={lender._id} 
             img={user_image} 
             lender={lender.lender.name} 
             renter={lender.renter.name} 
@@ -28,7 +26,6 @@ const LendersDetails = () => {
             desc3={lender.vehicle.regno}
             trans={true}
             />
-        </>
     ))
     return (
         <>
