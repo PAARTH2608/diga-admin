@@ -10,7 +10,7 @@ const Details = props => {
     // eslint-disable-next-line
     const paymentItems = details.filter(item => {
         if(!searchterm) return true
-        if(item.lender.name.toLowerCase().includes(searchterm)){
+        if(item.lender.name.toLowerCase().includes(searchterm) || item.renter.name.toLowerCase().includes(searchterm)){
             return true
         }
     }).map(item => (
