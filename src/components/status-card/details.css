@@ -76,6 +76,7 @@ body{
 .receipt button{
     color: rgb(147, 204, 62);
     text-decoration: underline;
+    background-color: white;
 }
 .payment-batch h2{
     font-size:1.1rem;

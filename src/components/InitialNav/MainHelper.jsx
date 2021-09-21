@@ -12,7 +12,7 @@ const MainHelper = props => {
     }
     return (
 		<>
-			{props.trans && <><div className='lenders-main' >
+			{props.trans && <><div className='lenders-main'>
 				<div className='image'>
 					<div className='lenders-image'>
 						<img src={props.img} alt='img'></img>
