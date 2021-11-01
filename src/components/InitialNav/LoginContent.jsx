@@ -36,7 +36,7 @@ const LoginContent = props => {
         <>
         <form className="login-content" onSubmit={toggleLandingHandler}>
             <div className="login-page-logo">
-                <img src="" alt="login-logo"></img>
+                <img src="src/assets/images/DIGA.svg" alt="login-logo"></img>
             </div>
             <div className="user-id">
                 <h2 className="user-id-name">User_ID</h2>

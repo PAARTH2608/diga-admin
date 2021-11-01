@@ -1,5 +1,5 @@
 import React from 'react';
-import user_image from '../../assets/images/paarth.png';
+import user_image from '../../assets/images/user.png';
 import './LendersDetails.css';
 import { useSelector } from 'react-redux';
 import MainHelper from '../InitialNav/MainHelper';

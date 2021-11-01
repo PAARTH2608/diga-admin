@@ -1,11 +1,12 @@
 import React from 'react';
 import { useSelector } from 'react-redux'
-import user_image from '../../assets/images/paarth.png';
+import user_image from '../../assets/images/user.png';
 import './RentersDetails.css';
-import MainHelper from '../InitialNav/MainHelper';
+import MainHelper1 from '../InitialNav/MainHelper1';
 const RentersDetails = () => {
     const searchterm = useSelector(state => state.filters.term)
     const rentersDetails = useSelector(state => state.bookings.adminInfoDetails);
+    console.log(rentersDetails)
     // eslint-disable-next-line
     const renters = rentersDetails.filter(item => {
         if(!searchterm) return true
@@ -13,7 +14,7 @@ const RentersDetails = () => {
             return true
         }
     }).map(renter => (
-        <MainHelper 
+        <MainHelper1 
             key={renter._id} 
             img={user_image} 
             lender={renter.lender.name} 
